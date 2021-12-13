@@ -1,6 +1,8 @@
+import s from './Profile.module.css';
+
 const Profile = () => {
 	return (
-		<div className='content'>
+		<div className={s.content}>
 			<div>
 				<img src='https://pbs.twimg.com/media/FFWoVyqX0AU31qj?format=jpg&name=4096x4096' />
 			</div>
@@ -12,9 +14,9 @@ const Profile = () => {
 				<div>
 					New post
 				</div>
-				<div>
-					<div>post1</div>
-					<div>post2</div>
+				<div className='posts'>
+					<div className={s.item}>post1</div>
+					<div className={s.item}>post2</div>
 				</div>
 			</div>
 
