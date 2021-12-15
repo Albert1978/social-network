@@ -1,14 +1,16 @@
 import s from './NavBar.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+const setActive = ({ isActive }) => isActive ? s.activeLink : '';
 
 const NavBar = () => {
 	return (
 		<nav className={s.nav}>
-			<div className={`${s.item} ${s.active}`}>
-				<Link to='/profile'>Profile</Link>
+			<div className={s.item}>
+				<NavLink to='/profile' className={setActive}>Profile</NavLink>
 			</div>
 			<div className={s.item}>
-				<Link to='/dialogs'>Messages</Link>
+				<NavLink to='/dialogs' className={setActive}>Messages</NavLink>
 			</div>
 			<div className={s.item}>
 				<a>News</a>
@@ -21,6 +23,8 @@ const NavBar = () => {
 			</div>
 		</nav>
 	)
+	// activeClassName={s.activeLink}
+	// className={({ isActive }) => isActive ? 'activeLink' : ''}
 }
 
 export default NavBar;
