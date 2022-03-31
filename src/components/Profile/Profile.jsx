@@ -5,7 +5,7 @@ const Profile = () => {
 	return (
 		<div>
 			<div>
-				<img src='https://pbs.twimg.com/media/FFWoVyqX0AU31qj?format=jpg&name=4096x4096' />
+				<img src='https://html5css.ru/css/img_lights.jpg' />
 			</div>
 			<div>
 				ava + description
