@@ -2,13 +2,13 @@ import s from './MyPosts.module.css';
 import Post from './Post/Post'
 const MyPosts = () => {
 	return (
-		<div>
-			My posts
+		<div className={s.myPosts}>
+			<h3>My posts</h3>
 			<div>
-				<textarea></textarea>
+				<div><textarea></textarea></div>
 				<button>add post</button>
 			</div>
-			<div className='posts'>
+			<div className={s.posts}>
 				<Post message='Hi, how are you?' count='10' />
 				<Post message="It's my first post" count='15' />
 			</div>
