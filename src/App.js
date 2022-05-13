@@ -10,15 +10,15 @@ import News from './components/News/News';
 import Musick from './components/Musick/Musick';
 import Settings from './components/Settings/Settings';
 
-const App = ({ dialogs, messeges, posts }) => {
+const App = ({ state }) => {
 	return (
 		<div className='app-wrapper'>
 			<Header />
 			<NavBar />
 			<div className='app-wrapper-content'>
 				<Routes>
-					<Route path='/profile' element={<Profile posts={posts} />} />
-					<Route path='/dialogs/*' element={<Dialogs dialogs={dialogs} messeges={messeges} />} />    // '*'' нужна для того чтобы при переключении между именами не менялось содержимое
+					<Route path='/profile' element={<Profile state={state.profilePage} />} />
+					<Route path='/dialogs/*' element={<Dialogs state={state.dialogsPage} />} />    // '*'' нужна для того чтобы при переключении между именами не менялось содержимое
 					<Route path='/news' element={<News />} />
 					<Route path='/musick' element={<Musick />} />
 					<Route path='/settings' element={<Settings />} />

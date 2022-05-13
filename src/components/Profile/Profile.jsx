@@ -2,12 +2,12 @@ import s from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = ({ posts }) => {
+const Profile = ({ state }) => {
 	return (
 		<div>
 			<ProfileInfo />
 			<div>
-				<MyPosts posts={posts} />
+				<MyPosts posts={state.posts} />
 			</div>
 		</div>
 	)
